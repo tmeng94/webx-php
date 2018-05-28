@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Webx</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<form>
+    <div class="form-group">
+        <div class="input-group">
+            <label class="input-group-text" for="encryptionKey1">Encryption Key 1</label>
+        </div>
+        <input type="text" class="form-control" id="encryptionKey1" value="antidisestablishmentarianism"
+               placeholder="Please enter the 1st encryption key.">
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label class="input-group-text" for="encryptionKey2">Encryption Key 2</label>
+        </div>
+        <input type="text" class="form-control" id="encryptionKey2" value="honorificabilitudinitatibus"
+               placeholder="Please enter the 2nd encryption key.">
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label class="input-group-text" for="cipherText">Encrypted Text</label>
+            <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="button" onclick="decrypt()">Decrypt</button>
+            </div>
+        </div>
+        <textarea class="form-control" rows="5" id="cipherText"></textarea>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label class="input-group-text" for="plainText">Plain Text</label>
+            <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="button" onclick="encrypt()">Encrypt</button>
+            </div>
+        </div>
+        <textarea class="form-control" rows="5" id="plainText"></textarea>
+    </div>
+</form>
+<script src="index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
