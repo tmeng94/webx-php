@@ -6,14 +6,14 @@ function decrypt() {
         $("#plainText").val("");
     } else {
         let http = new XMLHttpRequest();
-        http.onreadystatechange = function() {
+        http.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
                 $("#plainText").val(this.responseText);
             }
         };
         http.open("POST", "webx.php", true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        http.send("action=decrypt&key1=" + key1 + "&key2=" + key2 + "&text=" + text);
+        http.send("action=decrypt&key1=" + encodeURIComponent(key1) + "&key2=" + encodeURIComponent(key2) + "&text=" + encodeURIComponent(text));
     }
 }
 
@@ -25,13 +25,13 @@ function encrypt() {
         $("#cipherText").val("");
     } else {
         let http = new XMLHttpRequest();
-        http.onreadystatechange = function() {
+        http.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
                 $("#cipherText").val(this.responseText);
             }
         };
         http.open("POST", "webx.php", true);
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        http.send("action=encrypt&key1=" + key1 + "&key2=" + key2 + "&text=" + text);
+        http.send("action=encrypt&key1=" + encodeURIComponent(key1) + "&key2=" + encodeURIComponent(key2) + "&text=" + encodeURIComponent(text));
     }
 }
